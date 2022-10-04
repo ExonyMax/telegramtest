@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="/telegramMessage/js/telegramform.js"></script>
+  <title>Сделать заказ</title>
+</head>
+<body>
+  <form id="form_contact" method="POST" autocomplete="off" enctype="multipart/form-data" class="contack-form">
+ 
+    <p class="for_you">Ваши заказы</p>
+   
+    <div class="preloader">
+ <p class="messageready"></p>
+    </div>
+    <url src="/telegramMessage/telegramSendServer/send-message-to-telegram.php"></url>
+   
+    <!-- Поле с именем -->
+    <div class="object_name">
+      <input name="name" type="text" class="inputObject_name"
+             placeholder="Введите ваше имя">
+    </div>
+   
+    <!-- Поле с телефоном -->
+    <div class="object_phone">
+      <input name="phone" type="tel" class="inputObject_phone"
+             placeholder="Введите ваш телефон">
+    </div>
+   
+    <!-- Поле с выбором файла -->
+    <div class="object_file">
+      <input type="file" name="files[]" id="inputObject_file"
+             class="inputObject_file" multiple>
+      <label for="inputObject_file" class="buttonObject_file">
+        <span class="object_fileText">Выберите файл</span>
+      </label>
+    </div>
+   
+    <!--Поле с темой в письме-->
+    <input name="theme" type="hidden" class="object_treme"
+           value="Заказ с сайта KFC">
+   
+    <!--Кнопка отправки формы-->
+    <button type="submit" class="buttonObject">Отправить</button>
+   
+  </form>
+</body>
+</html>
